@@ -10,7 +10,7 @@ import useFirestore from "../hooks/useFirestore";
          <div className="img-grid">
              { docs && docs.map(doc => (
                  <div className="img-wrap" key={doc.id}>
-                     <img src={doc.url} alt="pic"/>
+                     <img src={doc.url} alt="pic" height="480" width="480"/>
                  </div>
              ))}
          </div>

@@ -9,7 +9,7 @@ const useFirestore = (collection) => {
 
         // Listen to the documents inside firestore collection
         const unsub = projectFirestore.collection(collection)
-            //.orderBy('createdAT', 'desc')
+            .orderBy("createdAt", "desc")
             .onSnapshot((snap) => {
                 let documents =  [];
 
