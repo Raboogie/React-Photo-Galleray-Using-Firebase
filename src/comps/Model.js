@@ -1,4 +1,5 @@
 import React from "react";
+import {motion} from "framer-motion";
 
 const Model = (props) => {
     const handleClick = (e) => {
@@ -7,9 +8,13 @@ const Model = (props) => {
         }
     }
     return (
-        <div className="backdrop" onClick={handleClick}>
-            <img src={props.selectedImg} alt="enlarged pic"/>
-        </div>
+        <motion.div className="backdrop" onClick={handleClick}
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}>
+            <motion.img src={props.selectedImg} alt="enlarged pic"
+                initial={{y: "-100vh"}}
+                animate={{y: 0}}/>
+        </motion.div>
     )
 }
 export default Model;

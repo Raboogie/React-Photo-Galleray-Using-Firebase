@@ -81,6 +81,7 @@ label:hover{
 
 .img-wrap {
   /*overflow: hidden;*/
+  opacity: 0.9;
   height: auto;
   padding: 5% 0;
   position: relative;
@@ -110,4 +111,28 @@ label:hover{
   margin: 60px auto;
   box-shadow: 3px 5px 7px rgba(0,0,0,0.5);
   border: 3px solid white;
+}
+
+@media (max-width: 1080px) {
+  .img-grid {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+  }
+  .img-wrap {
+    padding: .1% 0;
+  }
+}
+
+@media (max-width: 720px) {
+  .img-grid {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+  .img-wrap {
+    padding: .1% 0;
+  }
 }
